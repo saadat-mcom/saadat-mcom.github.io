@@ -1,0 +1,23 @@
+# ── macOS ──────────────────────────────────────────────────────
+.DS_Store
+**/.DS_Store
+
+# ── Private job-application documents ─────────────────────────
+documents/industry/CANVA/
+documents/industry/Everlab/
+documents/industry/GenAI/
+documents/industry/Wirringan/
+documents/industry/agent Tom Cyrson/
+
+# ── Raw source DOCX/PDF files (kept locally, not public) ───────
+documents/industry/basecv/*.docx
+documents/industry/basecv/*.pdf
+documents/lecturers/original-lecturersc/
+documents/lecturers/*.docx
+documents/lecturers/*.pdf
+
+# ── Working project case-study source files ────────────────────
+projects/projects portfolio/
+
+# ── Scratch/draft files ────────────────────────────────────────
+index_gross.html

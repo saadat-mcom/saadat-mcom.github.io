@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Md. Nazmus Saadat — Industry CV 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:  #0d1b2a; --blue: #1565c0; --blue2: #1976d2; --accent: #0d47a1;
+      --muted: #4b5563; --border: #dde3ec; --light: #f4f6fa; --green: #15803d;
+    }
+    html { font-size: 10.5pt; }
+    body { font-family: 'Inter', Arial, sans-serif; color: #1a202c; background: #fff; line-height: 1.58; max-width: 940px; margin: 0 auto; padding: 30px 36px 48px; }
+
+    .cv-header { border-bottom: 3px solid var(--blue); padding-bottom: 14px; margin-bottom: 0; }
+    .name { font-size: 24pt; font-weight: 700; color: var(--accent); letter-spacing: -0.02em; line-height: 1.1; }
+    .tagline { font-size: 10.5pt; color: var(--muted); font-weight: 400; margin: 3px 0 10px; }
+    .contact-bar { display: flex; flex-wrap: wrap; gap: 5px 20px; font-size: 8.5pt; color: var(--muted); background: var(--light); border: 1px solid var(--border); border-radius: 6px; padding: 7px 12px; }
+    .contact-bar a { color: var(--blue); text-decoration: none; }
+    .pill { display: inline-block; background: var(--green); color: #fff; font-size: 7.5pt; font-weight: 700; padding: 2px 9px; border-radius: 20px; letter-spacing: 0.04em; }
+
+    .intro-grid { display: grid; grid-template-columns: 1fr 230px; gap: 22px; margin-top: 16px; }
+    .sec { margin-top: 18px; }
+    .sec-title { font-size: 8.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--blue); border-bottom: 1.5px solid var(--blue); padding-bottom: 3px; margin-bottom: 10px; }
+    p { font-size: 9.5pt; color: #2d3748; margin-bottom: 6px; }
+
+    .chip-group { margin-bottom: 8px; }
+    .chip-group .gl { font-size: 8pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); display: block; margin-bottom: 3px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+    .chip { background: var(--light); border: 1px solid var(--border); border-radius: 20px; padding: 2px 9px; font-size: 8pt; font-weight: 500; color: #1a202c; }
+
+    .metrics { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin: 12px 0 4px; }
+    .metric { background: var(--light); border: 1px solid var(--border); border-radius: 6px; padding: 10px 8px; text-align: center; }
+    .metric .val { font-size: 14pt; font-weight: 700; color: var(--blue); line-height: 1; }
+    .metric .lbl { font-size: 7.5pt; color: var(--muted); margin-top: 3px; }
+
+    .job { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+    .job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .jh { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 3px; }
+    .jtitle { font-size: 11pt; font-weight: 700; color: #0d1117; }
+    .jdate { font-size: 8.5pt; font-weight: 600; color: var(--blue2); white-space: nowrap; }
+    .jco { font-size: 9.5pt; font-weight: 600; color: var(--muted); margin: 1px 0 6px; }
+    .job ul { padding-left: 16px; }
+    .job li { font-size: 9.5pt; color: #2d3748; margin-bottom: 3px; }
+    .job li strong { color: #0d1117; }
+    .tech { margin-top: 5px; font-size: 8pt; color: var(--muted); }
+    .tech b { color: var(--blue2); }
+
+    .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
+    .proj { background: var(--light); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; }
+    .proj h4 { font-size: 9.5pt; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+    .proj .psub { font-size: 8pt; color: var(--blue2); font-weight: 600; margin-bottom: 5px; }
+    .proj p { font-size: 8.5pt; color: #374151; margin-bottom: 5px; }
+    .proj .kpi { font-size: 8pt; font-weight: 700; color: var(--green); }
+    .proj .tl { font-size: 7.5pt; color: var(--muted); margin-top: 4px; }
+
+    .edu { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .edu:last-child { border-bottom: none; }
+    .edu-deg { font-size: 10pt; font-weight: 700; color: #0d1117; }
+    .edu-inst { font-size: 9pt; color: var(--muted); }
+    .edu-thesis { font-size: 8.5pt; color: #374151; margin-top: 2px; font-style: italic; }
+    .edu-side { font-size: 9pt; font-weight: 700; color: var(--blue2); text-align: right; flex-shrink: 0; }
+
+    .aw-list { list-style: none; padding: 0; }
+    .aw-list li { font-size: 9.5pt; color: #2d3748; padding: 3px 0 3px 18px; position: relative; }
+    .aw-list li::before { content: '▶'; position: absolute; left: 0; color: var(--blue2); font-size: 7pt; top: 5px; }
+
+    @media print {
+      body { padding: 8mm 10mm; max-width: 100%; font-size: 9pt; }
+      .sec { margin-top: 12px; }
+      @page { margin: 10mm 12mm; size: A4; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cv-header">
+  <div class="name">Dr. Md. Nazmus Saadat</div>
+  <div class="tagline">PhD &nbsp;·&nbsp; Senior Software Engineer &nbsp;·&nbsp; 20+ Years &nbsp;·&nbsp; Cloud · Mobile · Embedded · IoT · Navigation</div>
+  <div class="contact-bar">
+    <span>📧 <a href="mailto:nazmus.saadat@yahoo.com">nazmus.saadat@yahoo.com</a></span>
+    <span>📱 0466 449 945</span>
+    <span>🔗 <a href="https://linkedin.com/in/nazmus-saadat-dr">linkedin.com/in/nazmus-saadat-dr</a></span>
+    <span>🌐 <a href="https://saadat-mcom.github.io">saadat-mcom.github.io</a></span>
+    <span>📍 Sydney, NSW &nbsp;·&nbsp; 🇦🇺 Australian Citizen</span>
+    <span><span class="pill">✓ Open to Opportunities</span></span>
+  </div>
+</div>
+
+<div class="intro-grid">
+  <div class="sec" style="margin-top:12px;">
+    <div class="sec-title">Professional Summary</div>
+    <p>PhD-qualified Senior Software Engineer with <strong>20+ years</strong> of hands-on experience delivering complex systems across intelligent transportation, fleet telematics, industrial IoT, cloud-native platforms and Android mobile. Currently at <strong>Mastercom Australia</strong> building enterprise-grade public transport navigation and fleet intelligence solutions as <strong>sole engineer</strong> across mobile, back-end and embedded hardware layers.</p>
+    <p>Track record of taking full technical ownership — from vehicle CAN Bus integration and Raspberry Pi edge devices through AWS cloud ingestion, OpenSearch analytics and production Android clients — delivering in compressed timelines with measurable outcomes.</p>
+    <p>Previously at <strong>MST Global / Komatsu</strong> engineering mission-critical underground tracking systems for heavy mining. Proven across Go, Kotlin, Python, Ruby on Rails, gRPC, Kubernetes, AWS and Azure. Australian citizen; no visa restrictions.</p>
+    <div class="metrics">
+      <div class="metric"><div class="val">20+</div><div class="lbl">Years Experience</div></div>
+      <div class="metric"><div class="val">120×</div><div class="lbl">Perf Improvement (MNS)</div></div>
+      <div class="metric"><div class="val">−80%</div><div class="lbl">Server Load Reduction</div></div>
+      <div class="metric"><div class="val">5+</div><div class="lbl">Production Systems Delivered</div></div>
+    </div>
+  </div>
+
+  <div class="sec" style="margin-top:12px;">
+    <div class="sec-title">Core Skills</div>
+    <div class="chip-group"><span class="gl">Back-End</span><div class="chips"><span class="chip">Go / Golang</span><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Ruby on Rails</span><span class="chip">gRPC</span><span class="chip">REST APIs</span><span class="chip">Sidekiq</span></div></div>
+    <div class="chip-group"><span class="gl">Mobile</span><div class="chips"><span class="chip">Android (Kotlin/Java)</span><span class="chip">Swift / iOS</span><span class="chip">Obj-C</span></div></div>
+    <div class="chip-group"><span class="gl">Cloud &amp; DevOps</span><div class="chips"><span class="chip">AWS Copilot</span><span class="chip">ECS Fargate</span><span class="chip">Azure</span><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">CI/CD</span></div></div>
+    <div class="chip-group"><span class="gl">Embedded / IoT</span><div class="chips"><span class="chip">Raspberry Pi</span><span class="chip">CAN Bus / J1939</span><span class="chip">SocketCAN</span><span class="chip">XCMP/XNL</span><span class="chip">MQTT</span><span class="chip">Lua AAF</span></div></div>
+    <div class="chip-group"><span class="gl">Navigation &amp; Analytics</span><div class="chips"><span class="chip">HERE SDK</span><span class="chip">HERE Routing API v8</span><span class="chip">GTFS</span><span class="chip">PostGIS</span><span class="chip">OpenSearch</span><span class="chip">PostgreSQL</span></div></div>
+    <div class="chip-group"><span class="gl">Languages</span><div class="chips"><span class="chip">Kotlin</span><span class="chip">Go</span><span class="chip">Python</span><span class="chip">Java</span><span class="chip">Ruby</span><span class="chip">Swift</span><span class="chip">C/C++</span><span class="chip">Lua</span><span class="chip">Bash</span></div></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Career History</div>
+
+  <div class="job">
+    <div class="jh"><span class="jtitle">Senior Software Engineer</span><span class="jdate">March 2024 – Present</span></div>
+    <div class="jco">Mastercom Australia &nbsp;·&nbsp; Sydney, NSW &nbsp;·&nbsp; Transport Technology</div>
+    <ul>
+      <li>Sole engineer on the <strong>Master Navigation System (MNS)</strong> — full-stack enterprise transit navigation integrating HERE Routing API v8 with GTFS feeds for NSW, VIC, QLD, WA and UK networks. Achieved <strong>120× load-time improvement</strong> (60 s → 0.5 s), <strong>80% server load reduction</strong> via multi-tier Room DB caching; 90%+ cache hit rate across 5,000+ routes per feed.</li>
+      <li>Designed and built the <strong>Fleet Telemetry &amp; Edge Computing Platform</strong> end-to-end (≈2 months, sole developer): Raspberry Pi edge runtime (Python, SocketCAN, systemd) capturing raw J1939/CAN Bus traffic at 5,000–8,000 frames/5–6 s, DBC-based signal decoding, resilient local spooling, HTTPS batch upload to AWS Copilot Python FastAPI service, OpenSearch indexing for operational fleet dashboards.</li>
+      <li>Designed and built <strong>MCommunicator</strong> — Android Kotlin tablet application for remote control of Motorola MOTOTRBO radios via XCMP/XNL protocol through a Raspberry Pi Wi-Fi/USB TCP gateway; driver-optimised UI with RSSI monitoring, zone/channel management, countdown safety and scripted Pi deployment tooling.</li>
+      <li>Built the <strong>VisualCounter Passenger Analytics Platform</strong>: replaced OEM cloud dependency with custom Lua AAF firmware (HTTPS/TLS) on Sierra Wireless MP70 gateways, Ruby ingestion pipeline on AWS ECS Fargate (Copilot) and OpenSearch analytics — eliminating ongoing third-party subscription costs.</li>
+      <li>Led the <strong>MP70 Fleet Reliability Investigation</strong>: root-cause analysis of telemetry outages; reviewed and improved Ruby on Rails ALMS-driven recovery workflows; restored disabled test coverage; defined staged recovery, gateway-locking and cooldown improvements.</li>
+      <li>Full-stack contributions across Go, Ruby on Rails, React, Kotlin and TypeScript in Kubernetes microservices on AWS; maintained PostgreSQL schemas and CI/CD pipelines.</li>
+    </ul>
+    <div class="tech"><b>Stack:</b> Kotlin · Android · HERE SDK 4.18.5 · GTFS · Room DB · WorkManager · PostGIS · PostgreSQL · Sidekiq · Python · FastAPI · cantools · SocketCAN · J1939 · DBC · Raspberry Pi · XCMP/XNL · Lua · Ruby on Rails · Go · AWS Copilot · ECS Fargate · OpenSearch · Kubernetes · Docker</div>
+  </div>
+
+  <div class="job">
+    <div class="jh"><span class="jtitle">Senior Software Engineer</span><span class="jdate">December 2021 – March 2024</span></div>
+    <div class="jco">MST Global / Komatsu Australia &nbsp;·&nbsp; NSW &nbsp;·&nbsp; Mining Technology</div>
+    <ul>
+      <li>Core engineer on the <strong>Helix/Nebula underground tracking platform</strong> — mission-critical personnel and asset location for underground mining environments.</li>
+      <li>Built high-availability back-end services in <strong>Go with gRPC</strong>; maintained legacy Node.js services. Developed <strong>Angular dashboards</strong> with WebSocket-driven real-time telemetry and 3D underground map visualisation.</li>
+      <li>Authored automation in Go, Bash and Python; integrated <strong>Grafana and Prometheus</strong>; managed <strong>Kubernetes/Azure</strong> infrastructure.</li>
+    </ul>
+    <div class="tech"><b>Stack:</b> Go · gRPC · Node.js · Angular · WebSocket · Kubernetes · Azure · Docker · Grafana · Prometheus · Python · Bash</div>
+  </div>
+
+  <div class="job">
+    <div class="jh"><span class="jtitle">Lead Technical Consultant</span><span class="jdate">February 2019 – December 2022</span></div>
+    <div class="jco">Simple Motion Sdn Bhd (clickncare.net) &nbsp;·&nbsp; Remote / Malaysia</div>
+    <ul>
+      <li>Led architecture and development of a healthcare IoT platform: Swift (iOS) + Java (Android) clients, Go/Kubernetes microservices, WebRTC real-time video; enforced secure-coding practices; drove Protocol Buffer migration.</li>
+    </ul>
+    <div class="tech"><b>Stack:</b> Go · Swift · Java · Kubernetes · Docker · WebRTC · Protocol Buffers</div>
+  </div>
+
+  <div class="job">
+    <div class="jh"><span class="jtitle">Senior Lecturer / Associate Professor</span><span class="jdate">January 2016 – November 2020</span></div>
+    <div class="jco">Universiti Kuala Lumpur (MIIT / UniKL) &nbsp;·&nbsp; Malaysia</div>
+    <ul>
+      <li>Led national-grant software R&amp;D; developed Python/Flask recommender-system prototype ported to production Go; supervised ≈100 FYPs and MSc/PhD candidates; published Scopus-indexed research.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jh"><span class="jtitle">Lecturer in Computing</span><span class="jdate">November 2020 – November 2021</span></div>
+    <div class="jco">TAFE NSW &nbsp;·&nbsp; Australia</div>
+    <ul>
+      <li>Delivered web, mobile, IoT and cybersecurity engineering units; developed industry-aligned curriculum and assessment.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jh"><span class="jtitle">VP – Software System Architecture &amp; Senior iOS Developer</span><span class="jdate">June 2014 – December 2015</span></div>
+    <div class="jco">Ebizu Sdn Bhd &nbsp;·&nbsp; Malaysia</div>
+    <ul>
+      <li>Managed technology roadmap and led iOS/POS mobile engineering (Objective-C, Xcode); PCI-compliant payment hardware SDK integration.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jh"><span class="jtitle">Senior Consultant / Lead Developer / VP</span><span class="jdate">March 2013 – May 2014</span></div>
+    <div class="jco">MOLCube / MOLPay &nbsp;·&nbsp; Malaysia &nbsp;·&nbsp; FinTech</div>
+    <ul>
+      <li>Built merchant payment SDK (iOS/Android); PCI-DSS compliance; Go microservice POC replacing PHP back-end.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="jh"><span class="jtitle">Earlier Roles (Selected)</span><span class="jdate">2002 – 2013</span></div>
+    <div class="jco">InfoConnect · Ofisgate · MIMOS Berhad · IUKL · UPM (RA) · Southtech · ConnectBD</div>
+    <ul>
+      <li><strong>MIMOS Berhad (2007–2010):</strong> Researcher, WiMAX/OFDMA MAC scheduling algorithms in C/C++ (IEEE 802.16e/j); 4 patents; simulation using QualNet, NS2, OPNET.</li>
+      <li><strong>Ofisgate (2010–2012):</strong> C/C++ protocol engineering training for TM R&amp;D, MIMOS, UTM, UKM; QualNet simulation consulting.</li>
+      <li><strong>UPM Graduate RA (2003–2006):</strong> Bluetooth remote control systems (C/C++, PIC C); tutored C/C++ for 7 semesters.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Key Project Highlights</div>
+  <div class="proj-grid">
+    <div class="proj">
+      <h4>Master Navigation System (MNS)</h4>
+      <div class="psub">Mastercom · 2024–Present · Sole Developer</div>
+      <p>Full-stack enterprise transit navigation: Android Kotlin client + Ruby on Rails / PostgreSQL / PostGIS back-end + HERE Routing API v8. Converts GTFS routes, trips, stops and shape geometry into HERE route handles. Supports NSW, VIC, QLD, WA, UK networks. Features live navigation, simulation, stop-arrival detection, route deviation recovery, free-form geocoded routing.</p>
+      <div class="kpi">120× faster load · −80% server calls · 90%+ cache hit · 5,000+ routes/feed</div>
+      <div class="tl">Kotlin · Android · HERE SDK 4.18.5 · GTFS · Room DB · WorkManager · Retrofit2 · PostGIS · Sidekiq · Rails</div>
+    </div>
+    <div class="proj">
+      <h4>Fleet Telemetry &amp; Edge Computing Platform</h4>
+      <div class="psub">Mastercom · 2024–2025 · Sole Developer (~2 months)</div>
+      <p>End-to-end fleet intelligence: Raspberry Pi edge runtime (Python, SocketCAN, systemd) passively captures J1939/CAN Bus at 5k–8k frames/5–6 s; DBC decoding via cantools; resilient batching/spooling; AWS Copilot Python FastAPI cloud ingest; OpenSearch daily-indexed telemetry for dashboards and fleet analytics.</p>
+      <div class="kpi">Full lifecycle: vehicle bus → edge → cloud → analytics</div>
+      <div class="tl">Python · FastAPI · SocketCAN · J1939 · DBC · cantools · AWS Copilot · ECS Fargate · OpenSearch · Raspberry Pi</div>
+    </div>
+    <div class="proj">
+      <h4>MCommunicator — MOTOTRBO Radio Platform</h4>
+      <div class="psub">Mastercom · 2024–Present · Sole Developer</div>
+      <p>Android Kotlin tablet application for remote control of Motorola MOTOTRBO radios via XCMP/XNL protocol. Raspberry Pi gateway bridges Wi-Fi clients to radio USB endpoint. Driver-optimised UI: status messages, emergency controls, RSSI bars, zone/channel ops, volume lock, countdown safety. Full scripted Pi provisioning and deployment tooling.</p>
+      <div class="kpi">Replaces physical radio buttons with safe, large-format tablet interface</div>
+      <div class="tl">Kotlin · Android · XCMP/XNL · Raspberry Pi · Wi-Fi AP/client · systemd · Java services · Linux</div>
+    </div>
+    <div class="proj">
+      <h4>VisualCounter Passenger Analytics Platform</h4>
+      <div class="psub">Mastercom · 2024–Present · Sole Developer</div>
+      <p>Custom cloud-native passenger analytics replacing OEM hosted services. Enhanced Lua AAF firmware on Sierra Wireless MP70 gateways for HTTPS/TLS; Ruby ingestion pipeline on AWS ECS Fargate via Copilot; OpenSearch analytics with real-time counting visibility. Mastercom owns all data, eliminating OEM subscription dependency.</p>
+      <div class="kpi">Eliminated OEM dependency · Full data ownership · Real-time analytics</div>
+      <div class="tl">Lua · Ruby · AWS Copilot · ECS Fargate · OpenSearch · MP70 · HTTPS/TLS · IoT</div>
+    </div>
+    <div class="proj">
+      <h4>Helix/Nebula — Underground Mining Tracker</h4>
+      <div class="psub">MST Global / Komatsu · 2021–2024</div>
+      <p>Mission-critical underground personnel and asset tracking for Komatsu mining. Go back-end with gRPC, Angular real-time dashboards, WebSocket telemetry, 3D underground map visualisation. Kubernetes on Azure with Grafana/Prometheus observability stack.</p>
+      <div class="kpi">Mission-critical uptime · Real-time underground tracking</div>
+      <div class="tl">Go · gRPC · Angular · WebSocket · Kubernetes · Azure · Grafana · Prometheus · Docker</div>
+    </div>
+    <div class="proj">
+      <h4>MP70 Fleet Reliability &amp; Recovery Initiative</h4>
+      <div class="psub">Mastercom · 2024–2025</div>
+      <p>Deep reliability engineering: root-cause analysis of telemetry outage patterns in Sierra Wireless MP70 fleets; reviewed Ruby on Rails ALMS-driven automated recovery; identified false-positive triggers, concurrent recovery races, incomplete post-recovery validation; restored disabled tests; defined staged recovery roadmap with gateway locking and cooldowns.</p>
+      <div class="kpi">Root-cause resolution · Safer automated fleet recovery</div>
+      <div class="tl">Ruby on Rails · ALMS API · IoT fleet operations · Reliability engineering · Test strategy</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Education</div>
+  <div class="edu">
+    <div class="edu-main">
+      <div class="edu-deg">Doctor of Philosophy (PhD)</div>
+      <div class="edu-inst">Universiti Putra Malaysia (UPM) — Computer and Communication Systems Engineering</div>
+      <div class="edu-thesis">Thesis: "Adaptive and Optimized Resource Allocation Algorithms for OFDMA-Based Networks"</div>
+    </div>
+    <div class="edu-side">2015<br/>CGPA 3.84 / 4.00</div>
+  </div>
+  <div class="edu">
+    <div class="edu-main">
+      <div class="edu-deg">Master of Science — Research (MSc) &nbsp;·&nbsp; Scholarship Recipient</div>
+      <div class="edu-inst">Universiti Putra Malaysia (UPM) — Computer and Communication Systems Engineering</div>
+      <div class="edu-thesis">Thesis: "Design and Development of a Handheld Bluetooth-Based Application System Framework for Controlling and Monitoring Remote Devices"</div>
+    </div>
+    <div class="edu-side">2006<br/>CGPA 3.58 / 4.00</div>
+  </div>
+  <div class="edu">
+    <div class="edu-main">
+      <div class="edu-deg">Bachelor of Science — Computer Science &amp; Engineering</div>
+      <div class="edu-inst">Khulna University, Bangladesh</div>
+    </div>
+    <div class="edu-side">2002<br/>CGPA 3.09 / 4.00</div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Awards, Patents &amp; Memberships</div>
+  <ul class="aw-list">
+    <li>🥇 <strong>Gold Medal</strong> — BlueS Remote Device Controller, Brussels International Innovation Exhibition (UREKA / ITEX)</li>
+    <li>🥈 <strong>Silver Medal</strong> — LEADER Smart Plate Recognition System, ITEX Malaysia</li>
+    <li>🥉 <strong>Bronze Medal</strong> — Secure Crowdfunding System Using Blockchain, ITEX Malaysia</li>
+    <li>📜 <strong>4 Patents (Co-Inventor, MIMOS Berhad / USA)</strong> — WiMAX Mesh Network Entry Process; Multi-Hop Frame Structure; BS Mesh Architecture; Cell-Site Routing Method</li>
+    <li>🏛️ <strong>IEEE Member</strong> — Communication Society, Malaysian Chapter (since 2008) &nbsp;·&nbsp; <strong>Certified WiMAX Core Network Engineer</strong> (WiMAX Forum, 2009)</li>
+    <li>🌐 <strong>IELTS 7.5</strong> — English proficiency</li>
+  </ul>
+</div>
+
+</body>
+</html>
