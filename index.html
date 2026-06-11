@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Nazmus Saadat — Senior Software Engineer</title>
+  <meta name="description" content="Portfolio of Dr. Nazmus Saadat — Senior Software Engineer, Lecturer and Embedded Systems Engineer specialising in Android, Cloud Platforms, Fleet Telematics, Navigation Systems and IoT." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    /* ── Reset & Variables ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0d1b2a;
+      --blue:   #1565c0;
+      --blue2:  #1976d2;
+      --accent: #00b4d8;
+      --light:  #f5f7fa;
+      --muted:  #6b7280;
+      --border: #e5e7eb;
+      --radius: 10px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #fff;
+      color: #1a1a2e;
+      line-height: 1.7;
+    }
+
+    /* ── Navigation ───────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5%;
+      height: 60px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .nav-logo {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.80);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── Hero ─────────────────────────────────────────────────────── */
+    #hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a2e47 100%);
+      color: #fff;
+      padding: 90px 5% 80px;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+    .hero-text { flex: 1; min-width: 280px; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(0,180,216,0.15);
+      color: var(--accent);
+      border: 1px solid rgba(0,180,216,0.4);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    #hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    #hero h1 span { color: var(--accent); }
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.70);
+      margin-bottom: 18px;
+      font-weight: 400;
+    }
+    .hero-summary {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 560px;
+      margin-bottom: 30px;
+    }
+    .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 24px;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.25); }
+    .btn-primary   { background: var(--blue2); color: #fff; }
+    .btn-outline   { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-accent    { background: var(--accent); color: var(--navy); }
+
+    .hero-stats {
+      flex: 0 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      min-width: 220px;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .stat-card .num {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-card .label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 4px;
+    }
+
+    /* ── Sections ─────────────────────────────────────────────────── */
+    section { padding: 70px 5%; }
+    section:nth-child(even) { background: var(--light); }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header h2 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .section-header p { color: var(--muted); font-size: 0.95rem; }
+    .section-line {
+      width: 48px;
+      height: 3px;
+      background: var(--blue2);
+      border-radius: 2px;
+      margin: 10px auto 0;
+    }
+
+    /* ── About ────────────────────────────────────────────────────── */
+    #about .about-grid {
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .about-text { flex: 1; min-width: 260px; }
+    .about-text p { color: #374151; margin-bottom: 14px; }
+    .about-highlights { flex: 0 0 auto; min-width: 220px; }
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+    .highlight-item i { color: var(--blue2); width: 18px; text-align: center; }
+
+    /* ── Skills ───────────────────────────────────────────────────── */
+    #skills .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .skill-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .skill-card h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--blue2);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3px 11px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #374151;
+    }
+
+    /* ── Projects ─────────────────────────────────────────────────── */
+    #portfolio .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .project-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+    .project-icon {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--accent) 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      flex-shrink: 0;
+    }
+    .project-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; color: var(--navy); }
+    .project-card p { font-size: 0.88rem; color: var(--muted); flex: 1; margin-bottom: 16px; }
+    .project-tech { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tech-tag {
+      background: rgba(21,101,192,0.08);
+      color: var(--blue2);
+      border-radius: 4px;
+      padding: 2px 9px;
+      font-size: 0.74rem;
+      font-weight: 600;
+    }
+
+    /* ── Experience ───────────────────────────────────────────────── */
+    #experience .timeline {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+    .timeline-item {
+      padding: 0 0 32px 50px;
+      position: relative;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 6px;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      background: var(--blue2);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px var(--blue2);
+    }
+    .timeline-date {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--blue2);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .timeline-item h3 { font-size: 1rem; font-weight: 700; color: var(--navy); }
+    .timeline-item .company { font-size: 0.9rem; color: var(--muted); margin-bottom: 8px; }
+    .timeline-item ul { padding-left: 18px; }
+    .timeline-item li { font-size: 0.88rem; color: #374151; margin-bottom: 4px; }
+
+    /* ── Publications ─────────────────────────────────────────────── */
+    #publications .pub-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .pub-item {
+      background: #fff;
+      border-left: 4px solid var(--blue2);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+    .pub-item h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .pub-item .pub-meta { font-size: 0.82rem; color: var(--muted); }
+
+    /* ── Contact ──────────────────────────────────────────────────── */
+    #contact { background: var(--navy); color: #fff; text-align: center; }
+    #contact .section-header h2 { color: #fff; }
+    #contact .section-header p { color: rgba(255,255,255,0.6); }
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #fff;
+      transition: background 0.2s, transform 0.2s;
+      min-width: 200px;
+    }
+    .contact-card:hover { background: rgba(255,255,255,0.13); transform: translateY(-3px); }
+    .contact-card i { font-size: 1.4rem; color: var(--accent); }
+    .contact-card .label { font-size: 0.75rem; color: rgba(255,255,255,0.55); }
+    .contact-card .value { font-size: 0.92rem; font-weight: 600; }
+
+    /* ── Footer ───────────────────────────────────────────────────── */
+    footer {
+      background: #080f18;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 20px 5%;
+      font-size: 0.82rem;
+    }
+
+    /* ── Responsive ───────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      nav { padding: 0 4%; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 0.8rem; }
+      #hero { padding: 60px 4% 50px; }
+      .hero-stats { grid-template-columns: 1fr 1fr; width: 100%; }
+      section { padding: 50px 4%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ───────────────────────────────────────────────── -->
+  <nav>
+    <a class="nav-logo" href="#hero">Nazmus<span>Saadat</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#publications">Research</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-text">
+      <div class="hero-badge">Open to new opportunities</div>
+      <h1>Dr. Nazmus<br /><span>Saadat</span></h1>
+      <p class="hero-subtitle">Senior Software Engineer &nbsp;·&nbsp; Lecturer &nbsp;·&nbsp; Embedded Systems Engineer</p>
+      <p class="hero-summary">
+        Experienced software engineer and academic with a strong record in Android development,
+        Cloud Platforms, Fleet Telematics, Navigation Systems, IoT and Embedded Linux.
+        I build systems that scale from edge devices to enterprise cloud deployments.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="#" title="Download Industry CV">
+          <i class="fa fa-download"></i> Industry CV
+        </a>
+        <a class="btn btn-outline" href="#" title="Download Academic CV">
+          <i class="fa fa-graduation-cap"></i> Academic CV
+        </a>
+        <a class="btn btn-accent" href="#contact">
+          <i class="fa fa-envelope"></i> Hire Me
+        </a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card"><div class="num">10+</div><div class="label">Years Experience</div></div>
+      <div class="stat-card"><div class="num">4+</div><div class="label">Major Projects</div></div>
+      <div class="stat-card"><div class="num">2</div><div class="label">Industry Roles</div></div>
+      <div class="stat-card"><div class="num">2</div><div class="label">Academic Roles</div></div>
+    </div>
+  </section>
+
+  <!-- ── About ────────────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="section-header">
+      <h2>About Me</h2>
+      <div class="section-line"></div>
+      <p>Engineer by trade, educator by passion.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I am a Senior Software Engineer with extensive experience designing and delivering
+          complex embedded, mobile and cloud systems across the mining, transit, and telecommunications
+          industries. My work spans the full stack — from bare-metal firmware on Raspberry Pi hardware
+          to enterprise Android applications and AWS cloud back-ends.
+        </p>
+        <p>
+          Alongside my industry career I have held lecturer positions at <strong>TAFE NSW</strong>
+          and <strong>UniKL</strong>, delivering units in computing and engineering while supervising
+          Masters and PhD candidates. I bring both the rigour of academic research and the pragmatism
+          of production-grade engineering to every project.
+        </p>
+        <p>
+          I am actively seeking a new senior engineering or technical lead role where I can drive
+          impact at scale — ideally in autonomous systems, connected vehicles, cloud-native
+          platforms or AI-enabled solutions.
+        </p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-item"><i class="fa fa-map-marker-alt"></i> Australia (Open to remote)</div>
+        <div class="highlight-item"><i class="fa fa-mobile-alt"></i> Android &amp; Embedded Linux</div>
+        <div class="highlight-item"><i class="fa fa-cloud"></i> AWS Cloud Platforms</div>
+        <div class="highlight-item"><i class="fa fa-network-wired"></i> CAN Bus / J1939 / IoT</div>
+        <div class="highlight-item"><i class="fa fa-chalkboard-teacher"></i> University Lecturer</div>
+        <div class="highlight-item"><i class="fa fa-flask"></i> MSc / PhD Supervision</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills ───────────────────────────────────────────────────── -->
+  <section id="skills">
+    <div class="section-header">
+      <h2>Technical Skills</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4><i class="fa fa-code"></i> Languages</h4>
+        <div class="tag-list">
+          <span class="tag">Java</span><span class="tag">Kotlin</span><span class="tag">Python</span>
+          <span class="tag">C / C++</span><span class="tag">Bash</span><span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h4><i class="fa fa-mobile-alt"></i> Mobile &amp; Embedded</h4>
+        <div class="tag-list">
+          <span class="tag">Android SDK</span><span class="tag">Raspberry Pi</span>
+          <span class="tag">Embedded Linux</span><span class="tag">CAN Bus</span>
+          <span class="tag">J1939</span><span class="tag">XCMP/XNL</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h4><i class="fa fa-cloud"></i> Cloud &amp; Backend</h4>
+        <div class="tag-list">
+          <span class="tag">AWS</span><span class="tag">IoT Core</span><span class="tag">Lambda</span>
+          <span class="tag">REST APIs</span><span class="tag">MQTT</span><span class="tag">Docker</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h4><i class="fa fa-map"></i> Navigation &amp; GIS</h4>
+        <div class="tag-list">
+          <span class="tag">HERE SDK</span><span class="tag">GTFS</span>
+          <span class="tag">Real-time Transit</span><span class="tag">Route Handles</span>
+          <span class="tag">Maps APIs</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h4><i class="fa fa-tools"></i> Tools &amp; Practices</h4>
+        <div class="tag-list">
+          <span class="tag">Git</span><span class="tag">CI/CD</span><span class="tag">JIRA</span>
+          <span class="tag">Agile / Scrum</span><span class="tag">Unit Testing</span><span class="tag">Linux</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h4><i class="fa fa-brain"></i> AI &amp; Data</h4>
+        <div class="tag-list">
+          <span class="tag">Computer Vision</span><span class="tag">People Counting</span>
+          <span class="tag">Telemetry Analytics</span><span class="tag">OpenCV</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Portfolio ─────────────────────────────────────────────────── -->
+  <section id="portfolio">
+    <div class="section-header">
+      <h2>Engineering Portfolio</h2>
+      <div class="section-line"></div>
+      <p>Selected projects from my industry career</p>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon"><i class="fa fa-route"></i></div>
+        <h3>HERE Navigation &amp; GTFS Platform</h3>
+        <p>
+          Enterprise transit navigation solution integrating HERE Maps SDK with GTFS real-time
+          feeds. Delivers turn-by-turn guidance, route handles, stop matching and live journey
+          tracking for public transport operators at scale.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Android</span><span class="tech-tag">HERE SDK</span>
+          <span class="tech-tag">GTFS</span><span class="tech-tag">Java</span>
+          <span class="tech-tag">REST API</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon"><i class="fa fa-satellite-dish"></i></div>
+        <h3>Remote Fleet Telemetry Platform</h3>
+        <p>
+          Edge-to-cloud telematics system for Komatsu mining equipment. Raspberry Pi edge nodes
+          read J1939/CAN Bus data from heavy machinery, transmit over cellular to an AWS back-end
+          providing real-time dashboards and predictive diagnostics.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Raspberry Pi</span><span class="tech-tag">CAN Bus / J1939</span>
+          <span class="tech-tag">AWS IoT</span><span class="tech-tag">Python</span>
+          <span class="tech-tag">MQTT</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon"><i class="fa fa-users"></i></div>
+        <h3>AI People Counting Platform</h3>
+        <p>
+          Computer-vision system deployed on embedded hardware to count and track foot-traffic
+          in real time. Outputs analytics feeds consumed by venue management and occupancy
+          planning tools.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Embedded Linux</span><span class="tech-tag">OpenCV</span>
+          <span class="tech-tag">Python</span><span class="tech-tag">Computer Vision</span>
+          <span class="tech-tag">IoT</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon"><i class="fa fa-walkie-talkie"></i></div>
+        <h3>Motorola Radio Communicator System</h3>
+        <p>
+          Android and Raspberry Pi solution enabling software-controlled operation of Motorola
+          professional radios via XCMP/XNL protocols. Provides fleet-wide push-to-talk, channel
+          management and remote diagnostics.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Android</span><span class="tech-tag">Raspberry Pi</span>
+          <span class="tech-tag">XCMP / XNL</span><span class="tech-tag">Kotlin</span>
+          <span class="tech-tag">Serial Comms</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Experience ────────────────────────────────────────────────── -->
+  <section id="experience">
+    <div class="section-header">
+      <h2>Experience</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Recent · Industry</div>
+        <h3>Senior Software Engineer</h3>
+        <div class="company">MST Global (Komatsu) &mdash; Mining Technology</div>
+        <ul>
+          <li>Designed and delivered the Remote Fleet Telemetry Platform for Komatsu heavy equipment.</li>
+          <li>Built Android mobile applications for field operators and fleet managers.</li>
+          <li>Integrated Raspberry Pi edge hardware with CAN Bus / J1939 vehicle data buses.</li>
+          <li>Architected AWS IoT back-end pipeline for real-time telemetry ingestion and analytics.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Industry</div>
+        <h3>Android Software Engineer</h3>
+        <div class="company">HERE Technologies &mdash; Navigation &amp; Location Services</div>
+        <ul>
+          <li>Delivered enterprise transit navigation features using the HERE Maps SDK.</li>
+          <li>Integrated GTFS real-time feeds for accurate public transport routing.</li>
+          <li>Built and maintained route-handle processing pipeline for multi-modal journeys.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Academic</div>
+        <h3>Lecturer — Computing &amp; Engineering</h3>
+        <div class="company">TAFE NSW &mdash; Australia</div>
+        <ul>
+          <li>Delivered programming, networking and embedded-systems units to undergraduate cohorts.</li>
+          <li>Developed course materials aligned to industry competency standards.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Academic</div>
+        <h3>Lecturer &amp; Research Supervisor</h3>
+        <div class="company">UniKL &mdash; Universiti Kuala Lumpur</div>
+        <ul>
+          <li>Lectured in software engineering and computer networks.</li>
+          <li>Supervised MSc and PhD candidates in embedded systems and IoT research.</li>
+          <li>Published research in peer-reviewed international journals and conferences.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Publications ───────────────────────────────────────────────── -->
+  <section id="publications">
+    <div class="section-header">
+      <h2>Publications &amp; Research</h2>
+      <div class="section-line"></div>
+      <p>Peer-reviewed papers, conference proceedings and academic supervision</p>
+    </div>
+    <div class="pub-list">
+      <div class="pub-item">
+        <h4>IoT-based Fleet Monitoring and Telemetry System for Heavy Mining Equipment</h4>
+        <div class="pub-meta">International Journal · Add full citation here</div>
+      </div>
+      <div class="pub-item">
+        <h4>Real-time People Counting using Embedded Vision and Edge AI</h4>
+        <div class="pub-meta">Conference Proceedings · Add full citation here</div>
+      </div>
+      <div class="pub-item">
+        <h4>GTFS Integration with HERE Navigation SDK for Multi-modal Transit Routing</h4>
+        <div class="pub-meta">Technical Report / Conference · Add full citation here</div>
+      </div>
+      <div class="pub-item">
+        <h4>MSc &amp; PhD Supervision — Embedded Systems &amp; IoT (UniKL)</h4>
+        <div class="pub-meta">Graduate Research Supervision · Multiple candidates</div>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:24px; color:var(--muted); font-size:0.88rem;">
+      Full publication list available on request or via LinkedIn.
+    </p>
+  </section>
+
+  <!-- ── Contact ───────────────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="section-header">
+      <h2>Get In Touch</h2>
+      <div class="section-line" style="background:var(--accent);"></div>
+      <p>I am open to senior engineering roles, consulting and collaborations.</p>
+    </div>
+    <div class="contact-cards">
+      <a class="contact-card" href="mailto:your-email@example.com">
+        <i class="fa fa-envelope"></i>
+        <div>
+          <div class="label">Email</div>
+          <div class="value">your-email@example.com</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+        <div>
+          <div class="label">LinkedIn</div>
+          <div class="value">Connect on LinkedIn</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://github.com/saadat-mcom" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+        <div>
+          <div class="label">GitHub</div>
+          <div class="value">saadat-mcom</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Footer ───────────────────────────────────────────────────── -->
+  <footer>
+    <p>&copy; 2026 Dr. Nazmus Saadat &mdash; Built with GitHub Pages</p>
+  </footer>
+
+</body>
+</html>
