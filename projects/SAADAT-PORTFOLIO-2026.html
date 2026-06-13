@@ -487,12 +487,73 @@ Passenger Reporting &amp; Operational Dashboards</div>
       </div>
     </div>
 
-    <!-- ── PROJECT 6: MP70 Reliability ── -->
+    <!-- ── PROJECT 6: Helix Virtual LightBar ── -->
+    <div class="proj-full">
+      <div class="proj-header">
+        <div class="proj-icon" style="background:linear-gradient(135deg,#1e40af,#3b82f6);">🚨</div>
+        <div class="proj-header-text">
+          <div class="proj-num">Project 6 · MST Global / Komatsu Australia · 2021–2024</div>
+          <div class="proj-title">Helix Virtual LightBar Device Platform</div>
+          <div class="proj-role">Architect &amp; Lead Engineer: Device Virtualization · Go / Golang · Industrial IoT · REST APIs · Mining Safety Systems</div>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="kpi-row">
+          <span class="kpi-pill">100% hardware dependency eliminated</span>
+          <span class="kpi-pill">N simultaneous virtual devices</span>
+          <span class="kpi-pill">Zero-cost dev &amp; demo environments</span>
+          <span class="kpi-pill">Full PatLite protocol compatibility</span>
+        </div>
+        <p class="proj-summary">
+          Designed and built a software-based virtual device platform that emulates multiple physical LightBar safety devices simultaneously — compatible with existing Helix Dashboard workflows and PatLite communication interfaces. Physical LightBars in underground mining environments were scarce and expensive; this platform eliminated that dependency entirely, enabling development, integration testing and customer demonstrations without any physical hardware.
+        </p>
+        <div class="arch">Helix Dashboard Layer
+    ↓  (REST Control API + Status API)
+LightBar Dashboard Layer  (configure · monitor · command)
+    ↓
+Virtual Device Platform  (hardware abstraction layer — Go)
+    ├── Virtual LightBar Instance 1  →  localhost:10002  (independent state)
+    ├── Virtual LightBar Instance 2  →  localhost:10003  (independent state)
+    ├── Virtual LightBar Instance 3  →  localhost:10004  (independent state)
+    └── Virtual LightBar Instance N  →  dynamically allocated
+
+Each instance: color · flash · alert · buzzer · operational status</div>
+        <div class="proj-grid-2">
+          <div class="proj-block">
+            <h4>Engineering Design</h4>
+            <ul>
+              <li>Single simulator instance spawns N independent virtual LightBars, each with unique addressable REST endpoint and isolated internal state</li>
+              <li>Control API: color changes, flash patterns, alert states, buzzer commands — identical interface to physical device</li>
+              <li>Status API: real-time state query matching physical LightBar response format</li>
+              <li>Config-driven: number of devices, IP address, starting port — instant environment setup</li>
+              <li>State model: current color, flash config, alert config, buzzer config, operational status</li>
+              <li>Visualization layer for live inspection of active colors, flash patterns, alert conditions</li>
+            </ul>
+          </div>
+          <div class="proj-block">
+            <h4>Business &amp; Operational Outcomes</h4>
+            <ul>
+              <li>Eliminated physical hardware dependency for development and CI testing pipelines</li>
+              <li>Parallel development across teams without competing for scarce physical devices</li>
+              <li>Customer demonstrations delivered without any hardware logistics or setup cost</li>
+              <li>Automated integration testing of Helix safety workflows against virtual fleet</li>
+              <li>Reduced procurement costs for test environments</li>
+              <li>Accelerated delivery of mining safety software features</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag">Go / Golang</span><span class="tag">REST APIs</span><span class="tag">Device Virtualization</span><span class="tag">Industrial IoT</span><span class="tag">Hardware Abstraction</span><span class="tag">PatLite Protocol</span><span class="tag">Helix Platform</span><span class="tag">Mining Safety</span><span class="tag">State Management</span><span class="tag">Integration Testing</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PROJECT 7: MP70 Reliability ── -->
     <div class="proj-full">
       <div class="proj-header">
         <div class="proj-icon" style="background:linear-gradient(135deg,#991b1b,#dc2626);">🔧</div>
         <div class="proj-header-text">
-          <div class="proj-num">Project 6 · Mastercom Australia · 2024–2025</div>
+          <div class="proj-num">Project 7 · Mastercom Australia · 2024–2025</div>
           <div class="proj-title">MP70 Fleet Reliability &amp; Recovery Initiative</div>
           <div class="proj-role">Lead: Root-Cause Analysis · Ruby on Rails · ALMS Integration · Reliability Engineering · Test Strategy</div>
         </div>
