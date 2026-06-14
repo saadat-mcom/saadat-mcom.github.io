@@ -68,10 +68,38 @@
     .aw-list li { font-size: 9.5pt; color: #2d3748; padding: 3px 0 3px 18px; position: relative; }
     .aw-list li::before { content: '▶'; position: absolute; left: 0; color: var(--blue2); font-size: 7pt; top: 5px; }
 
+    /* ── Print button ── */
+    .print-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      background: var(--blue2);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 22px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(21,101,192,0.45);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .print-btn:hover { background: #1565c0; transform: translateY(-2px); }
+
     @media print {
-      body { padding: 8mm 10mm; max-width: 100%; font-size: 9pt; }
+      body { padding: 0; max-width: 100%; font-size: 9pt; }
       .sec { margin-top: 12px; }
+      .print-btn { display: none !important; }
+      div[style*="position:sticky"] { display: none !important; }
       @page { margin: 10mm 12mm; size: A4; }
+      .job { page-break-inside: avoid; }
+      .proj { page-break-inside: avoid; }
+      .intro-grid { page-break-inside: avoid; }
     }
   </style>
 </head>
@@ -84,6 +112,8 @@
   <a href="../../lecturers/SAADAT-ACADEMIC-CV-2026.html" style="color:#94a3b8;text-decoration:none;">&#127891; Academic CV</a>
   <span style="color:#475569;margin-left:auto;font-size:0.72rem;">Dr. Md. Nazmus Saadat &mdash; Industry CV 2026</span>
 </div>
+
+<button class="print-btn" onclick="window.print()">&#128438; Save as PDF</button>
 
   <div class="name">Dr. Md. Nazmus Saadat</div>
   <div class="tagline">PhD &nbsp;·&nbsp; Senior Software Engineer &nbsp;·&nbsp; 20+ Years &nbsp;·&nbsp; Cloud · Mobile · Embedded · IoT · Navigation</div>
