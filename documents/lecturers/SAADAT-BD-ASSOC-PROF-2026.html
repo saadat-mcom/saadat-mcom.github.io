@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Md. Nazmus Saadat — CV for Associate Professor (Bangladesh) 2026</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 10.5pt; }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      color: #111;
+      background: #fff;
+      line-height: 1.65;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 36px 48px 60px;
+    }
+
+    /* ── Header ── */
+    .cv-name {
+      font-size: 22pt;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.01em;
+      border-bottom: 3px solid #000;
+      padding-bottom: 8px;
+      margin-bottom: 6px;
+    }
+    .cv-tagline {
+      text-align: center;
+      font-size: 10pt;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .cv-contact {
+      text-align: center;
+      font-size: 9.5pt;
+      color: #222;
+      margin-bottom: 4px;
+    }
+    .cv-contact a { color: #000; text-decoration: underline; }
+    .cv-citizenship {
+      text-align: center;
+      font-size: 9pt;
+      font-style: italic;
+      color: #444;
+      margin-bottom: 2px;
+    }
+
+    /* ── Section headings ── */
+    .sec-title {
+      font-size: 11pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-bottom: 2px solid #000;
+      border-top: 2px solid #000;
+      padding: 4px 0;
+      margin: 20px 0 12px;
+      text-align: center;
+    }
+
+    /* ── Paragraphs ── */
+    p { font-size: 10pt; margin-bottom: 7px; text-align: justify; }
+
+    /* ── Education entries ── */
+    .edu-entry { margin-bottom: 12px; }
+    .edu-row { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+    .edu-deg { font-size: 10.5pt; font-weight: 700; }
+    .edu-grade { font-size: 10pt; font-weight: 700; }
+    .edu-inst { font-size: 10pt; font-weight: 600; margin: 2px 0; }
+    .edu-thesis { font-size: 9.5pt; font-style: italic; margin-top: 2px; }
+    .edu-detail { font-size: 9.5pt; margin-top: 2px; }
+    .edu-note { font-size: 9.5pt; font-weight: 700; color: #333; }
+
+    /* ── Academic appointments ── */
+    .appt { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid #ccc; }
+    .appt:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .appt-row { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+    .appt-title { font-size: 11pt; font-weight: 700; }
+    .appt-date { font-size: 9.5pt; font-weight: 600; }
+    .appt-inst { font-size: 10pt; font-weight: 600; color: #222; margin: 2px 0 5px; }
+    .appt-country { font-size: 9.5pt; font-style: italic; color: #555; }
+    ul { padding-left: 18px; }
+    li { font-size: 10pt; margin-bottom: 3px; }
+
+    /* ── Teaching table ── */
+    .teach-table { width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 6px; }
+    .teach-table th { background: #111; color: #fff; font-weight: 700; padding: 6px 10px; text-align: left; font-size: 8.5pt; letter-spacing: 0.04em; }
+    .teach-table td { padding: 5px 10px; border-bottom: 1px solid #ccc; vertical-align: top; }
+    .teach-table tr:nth-child(even) td { background: #f7f7f7; }
+    .teach-table td:first-child { font-weight: 700; width: 34px; text-align: center; }
+    .teach-table td:nth-child(2) { font-weight: 600; }
+
+    /* ── Publications ── */
+    .pub-item { margin-bottom: 8px; padding-left: 16px; border-left: 3px solid #555; }
+    .pub-type { font-size: 8pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #444; }
+    .pub-title { font-size: 10pt; font-weight: 700; color: #000; }
+    .pub-meta { font-size: 9pt; color: #444; }
+
+    /* ── Grants ── */
+    .grant-item { margin-bottom: 10px; padding: 10px 12px; background: #f7f7f7; border: 1px solid #ccc; }
+    .grant-item h4 { font-size: 10pt; font-weight: 700; margin-bottom: 3px; }
+    .grant-item p { font-size: 9.5pt; margin-bottom: 2px; text-align: left; }
+
+    /* ── Patents ── */
+    .patent-list { list-style: none; padding: 0; }
+    .patent-list li { font-size: 10pt; padding: 5px 0 5px 22px; border-bottom: 1px solid #ccc; position: relative; }
+    .patent-list li:last-child { border-bottom: none; }
+    .patent-list li::before { content: '◆'; position: absolute; left: 0; top: 5px; font-size: 9pt; }
+    .patent-list li .pid { font-size: 8.5pt; font-weight: 700; color: #333; display: block; }
+
+    /* ── Awards ── */
+    .award-table { width: 100%; border-collapse: collapse; font-size: 10pt; }
+    .award-table td { padding: 5px 10px; border-bottom: 1px solid #ccc; vertical-align: top; }
+    .award-table tr:nth-child(even) td { background: #f7f7f7; }
+    .award-table td:first-child { font-weight: 700; width: 80px; }
+
+    /* ── Research interests tags ── */
+    .ri-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+    .ri-tag { font-size: 9pt; padding: 3px 10px; border: 1px solid #666; border-radius: 3px; background: #f7f7f7; }
+
+    /* ── Service 2-col ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .two-col-block h5 { font-size: 10pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px; text-decoration: underline; }
+    .two-col-block ul { padding-left: 16px; }
+    .two-col-block li { font-size: 10pt; margin-bottom: 2px; }
+
+    /* ── References ── */
+    .ref-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
+    .ref-card { padding: 10px 12px; background: #f7f7f7; border: 1px solid #ccc; }
+    .ref-card .ref-name { font-size: 10.5pt; font-weight: 700; margin-bottom: 2px; }
+    .ref-card p { font-size: 9.5pt; margin-bottom: 1px; text-align: left; }
+
+    /* ── Memberships / Scholarships inline ── */
+    .inline-list { columns: 2; column-gap: 20px; }
+    .inline-list li { font-size: 10pt; margin-bottom: 3px; }
+
+    /* ── Print button ── */
+    .print-btn {
+      position: fixed; bottom: 28px; right: 28px; z-index: 200;
+      background: #0a3d78; color: #fff; border: none; border-radius: 50px;
+      padding: 12px 22px; font-size: 0.88rem; font-weight: 700;
+      font-family: Arial, sans-serif; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(10,61,120,0.45);
+    }
+    .print-btn:hover { background: #1565c0; }
+
+    @media print {
+      .print-btn { display: none; }
+      body { padding: 10mm 14mm; font-size: 10pt; }
+      .sec-title { page-break-after: avoid; }
+      .appt, .pub-item, .grant-item { page-break-inside: avoid; }
+      @page { margin: 14mm 14mm 16mm 14mm; size: A4; }
+    }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨 Print / Save PDF</button>
+
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<div class="cv-name">DR. MD. NAZMUS SAADAT, PhD</div>
+<div class="cv-tagline">PhD · MSc Research (Scholarship) · BSc Computer Science &amp; Engineering</div>
+<div class="cv-tagline" style="font-weight:400; font-style:italic;">Senior Lecturer &amp; Researcher · Software Architect · Industry Technology Leader</div>
+<div class="cv-contact" style="margin-top:8px;">
+  📧 <a href="mailto:nazmus.saadat@yahoo.com">nazmus.saadat@yahoo.com</a> &nbsp;|&nbsp;
+  📱 +61 466 449 945 &nbsp;|&nbsp;
+  🔗 <a href="https://linkedin.com/in/nazmus-saadat-dr">linkedin.com/in/nazmus-saadat-dr</a> &nbsp;|&nbsp;
+  🌐 <a href="https://saadat-mcom.github.io">saadat-mcom.github.io</a>
+</div>
+<div class="cv-citizenship">Sydney, NSW, Australia &nbsp;|&nbsp; Australian Citizen &nbsp;|&nbsp; IELTS 7.5 (English Proficient)</div>
+
+<!-- ═══════════════════════════ PROFESSIONAL PROFILE ═══════════════════════════ -->
+<div class="sec-title">Professional Profile</div>
+<p>PhD-qualified academic, researcher, software architect and technology leader with <strong>more than 20 years of international experience</strong> spanning higher education, industrial R&amp;D, telecommunications, cloud computing, artificial intelligence, intelligent transportation systems, mobile platforms, distributed systems, embedded technologies and Internet of Things (IoT).</p>
+<p>Former <strong>Senior Lecturer at Universiti Kuala Lumpur (UniKL)</strong> and <strong>Lecturer in Computing at TAFE NSW (Australia)</strong>; researcher at MIMOS Berhad; and senior engineering professional across multiple Australian and international organisations including Mastercom Australia, MST Global/Komatsu, MOLPay and Ebizu. Currently practising as a Principal Software Engineer, maintaining active engagement with industry research, innovation and emerging technologies.</p>
+<p>Demonstrated record of <strong>teaching excellence</strong>, <strong>postgraduate supervision</strong>, <strong>curriculum development</strong>, <strong>research publication</strong>, <strong>grant participation</strong>, <strong>patent generation</strong> and <strong>industry collaboration</strong>. Experienced in supervising undergraduate, MSc and PhD students. Published author in international peer-reviewed Scopus-indexed journals and conferences; inventor on multiple wireless-communications patents; recipient of international innovation awards; Conference Chair, Workshop Chair and reviewer for international research venues.</p>
+
+<!-- ═══════════════════════════ ACADEMIC QUALIFICATIONS ═══════════════════════════ -->
+<div class="sec-title">Academic Qualifications</div>
+
+<div class="edu-entry">
+  <div class="edu-row">
+    <span class="edu-deg">Doctor of Philosophy (PhD)</span>
+    <span class="edu-grade">CGPA: 3.84 / 4.00</span>
+  </div>
+  <div class="edu-inst">Universiti Putra Malaysia (UPM), Malaysia &nbsp;—&nbsp; 2015</div>
+  <div class="edu-detail">Faculty of Engineering, Computer and Communication Systems Engineering</div>
+  <div class="edu-thesis">Thesis: "Adaptive and Optimized Resource Allocation Algorithms for OFDMA-Based Networks"</div>
+  <div class="edu-detail">Research focus: Resource allocation mechanism design and simulation for IEEE 802.16e/j OFDMA-based wireless networks; MAC-layer algorithm design; performance analysis and simulation.</div>
+</div>
+
+<div class="edu-entry">
+  <div class="edu-row">
+    <span class="edu-deg">Master of Science — Research (MSc)</span>
+    <span class="edu-grade">CGPA: 3.58 / 4.00</span>
+  </div>
+  <div class="edu-inst">Universiti Putra Malaysia (UPM), Malaysia &nbsp;—&nbsp; 2006</div>
+  <div class="edu-detail">Faculty of Engineering, Computer and Communication Systems Engineering</div>
+  <div class="edu-thesis">Thesis: "Design and Development of a Handheld Bluetooth-Based Application System Framework for Controlling and Monitoring Remote Devices"</div>
+  <div class="edu-note">Scholarship Recipient — Government of Malaysia Postgraduate Research Scholarship</div>
+</div>
+
+<div class="edu-entry">
+  <div class="edu-row">
+    <span class="edu-deg">Bachelor of Science — Computer Science &amp; Engineering</span>
+    <span class="edu-grade">CGPA: 3.09 / 4.00</span>
+  </div>
+  <div class="edu-inst">Khulna University, Bangladesh &nbsp;—&nbsp; 2002</div>
+  <div class="edu-detail">Major: Software Engineering. Covered programming, multithreaded programming, discrete mathematics, digital logic, systems programming, Linux/Unix administration, electrical &amp; electronics, robotics, artificial intelligence, software analysis &amp; design, web development.</div>
+  <div class="edu-note">Talent Pool Scholarship Recipient — Government of Bangladesh</div>
+</div>
+
+<div class="edu-entry">
+  <div class="edu-row">
+    <span class="edu-deg">Higher Secondary School Certificate (HSC) — Science</span>
+    <span class="edu-grade">82.5% — Grade A+</span>
+  </div>
+  <div class="edu-inst">Jhenidah Cadet College, Bangladesh &nbsp;—&nbsp; First Class</div>
+  <div class="edu-note">Government Scholarship Recipient</div>
+</div>
+
+<div class="edu-entry" style="padding-bottom:0; border-bottom:none;">
+  <div class="edu-row">
+    <span class="edu-deg">Secondary School Certificate (SSC) — Science</span>
+    <span class="edu-grade">84.4% — Grade A+</span>
+  </div>
+  <div class="edu-inst">Jhenidah Cadet College, Bangladesh &nbsp;—&nbsp; First Class</div>
+</div>
+
+<!-- ═══════════════════════════ RESEARCH INTERESTS ═══════════════════════════ -->
+<div class="sec-title">Research Interests</div>
+<div class="ri-tags">
+  <span class="ri-tag">Artificial Intelligence &amp; Machine Learning</span>
+  <span class="ri-tag">Large Language Models (LLMs)</span>
+  <span class="ri-tag">Retrieval-Augmented Generation (RAG)</span>
+  <span class="ri-tag">Agentic AI &amp; LangChain / LangGraph</span>
+  <span class="ri-tag">Software Engineering</span>
+  <span class="ri-tag">Cloud Computing &amp; Distributed Systems</span>
+  <span class="ri-tag">Internet of Things (IoT) &amp; Edge Computing</span>
+  <span class="ri-tag">Intelligent Transportation Systems</span>
+  <span class="ri-tag">Mobile Computing</span>
+  <span class="ri-tag">Wireless Communications &amp; Network Optimisation</span>
+  <span class="ri-tag">Computer Vision &amp; Image Processing</span>
+  <span class="ri-tag">Cybersecurity</span>
+  <span class="ri-tag">Blockchain Applications</span>
+  <span class="ri-tag">Data Analytics &amp; Big Data</span>
+  <span class="ri-tag">Smart Mobility Systems</span>
+  <span class="ri-tag">UAV Systems &amp; Remote Sensing</span>
+</div>
+
+<!-- ═══════════════════════════ RESEARCH PUBLICATIONS ═══════════════════════════ -->
+<div class="sec-title">Research Publications</div>
+<p style="font-size:9.5pt; margin-bottom:10px;"><em>Total: 15+ peer-reviewed publications. Multiple Scopus-indexed outputs. First-author across IEEE, ACM and journal venues.</em></p>
+
+<div class="pub-item">
+  <div class="pub-type">IEEE Conference — First Author</div>
+  <div class="pub-title">Bluetooth Based Wireless Remote Device Controlling and Data Acquisition</div>
+  <div class="pub-meta">IEEE AICT-ICIW 2006, Guadeloupe, French Caribbean | ISBN: 0-7695-2522-9</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">Journal — First Author</div>
+  <div class="pub-title">Resource Allocation Algorithm for Improving Performance of the OFDMA-Based Connection-Oriented Networks</div>
+  <div class="pub-meta">Transactions on Networks &amp; Communications | ISSN 2054-7420 | UK, 2015</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">ACM Conference — Scopus Indexed</div>
+  <div class="pub-title">Lecturers' Perception on Social Media Networks Uses in Education</div>
+  <div class="pub-meta">ACM IMCOM 2017, Beppu, Japan | Scopus-indexed</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">ACM Conference — First Author — Scopus Indexed</div>
+  <div class="pub-title">Application Framework for Forest Fire and Haze Detection with Data Acquisition Using Unmanned Aerial Vehicle</div>
+  <div class="pub-meta">ACM IMCOM 2018 | Scopus-indexed</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">Conference — First Author — Scopus Indexed</div>
+  <div class="pub-title">Simulation Technique of Steady-State Network Based on AODV Routing Protocol</div>
+  <div class="pub-meta">ICICTM 2018 | Scopus-indexed</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">Conference — First Author — Scopus Indexed</div>
+  <div class="pub-title">Resource Allocation Algorithms for Enhanced Performance in Wireless Virtualization Networks</div>
+  <div class="pub-meta">ICICTM 2018 | Scopus-indexed</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">Conference — First Author — Scopus Indexed</div>
+  <div class="pub-title">Blockchain Based Crowdfunding Systems</div>
+  <div class="pub-meta">Entech 2018 | Scopus-indexed</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">Conference — First Author — Scopus Indexed</div>
+  <div class="pub-title">Enhancing Airlines Delay Prediction by Implementing Classification Based Deep Learning Algorithms</div>
+  <div class="pub-meta">ACM IMCOM 2019 | Scopus-indexed</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">Conference — First Author — Scopus Indexed</div>
+  <div class="pub-title">Blockchain Based Crowdfunding Systems in Malaysia</div>
+  <div class="pub-meta">ICCAE 2019 | Scopus-indexed</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">Conference — Scopus Indexed</div>
+  <div class="pub-title">Recommendation Systems for Big Data-Based E-Commerce Platforms</div>
+  <div class="pub-meta">UniKL Research Symposium / STRG Output, 2019 | Scopus-indexed</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">Conference — Scopus Indexed</div>
+  <div class="pub-title">Real-Time Object and Event Detection Using OpenCV and Machine Learning</div>
+  <div class="pub-meta">UniKL Research Symposium / STRG Output, 2019 | Scopus-indexed</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">Conference — Scopus Indexed</div>
+  <div class="pub-title">Automated Attendance System Based on Face Detection</div>
+  <div class="pub-meta">UniKL Research Symposium, 2019 | Scopus-indexed</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">Conference — Scopus Indexed</div>
+  <div class="pub-title">Evaluation of 5G Networks Using NS-3</div>
+  <div class="pub-meta">UniKL Research Symposium, 2019 | Scopus-indexed</div>
+</div>
+
+<div class="pub-item">
+  <div class="pub-type">Conference — Scopus Indexed</div>
+  <div class="pub-title">Blockchain Applications in Supply Chain Management</div>
+  <div class="pub-meta">UniKL / ICCAE Research Output, 2019 | Scopus-indexed</div>
+</div>
+
+<p style="font-size:9pt; margin-top:6px;"><em>Research spans: AI/ML, Blockchain, Wireless Networks, IoT, Big Data, UAV Systems, Computer Vision, Real-Time Object Detection, Automated Attendance Systems, 5G Network Evaluation, Supply Chain Blockchain, Recommendation Systems.</em></p>
+
+<!-- ═══════════════════════════ RESEARCH GRANTS ═══════════════════════════ -->
+<div class="sec-title">Research Grants</div>
+
+<div class="grant-item">
+  <h4>Development and Implementation of Home Environment Using Bluetooth Technology</h4>
+  <p>MOSTI Malaysia Grant &nbsp;·&nbsp; 2004–2006 &nbsp;·&nbsp; Grant Value: RM 133,000 &nbsp;·&nbsp; Status: Completed</p>
+  <p><strong>Outcomes:</strong> Gold Medal — Brussels International Innovation Exhibition (UREKA); peer-reviewed publications; technology prototype development.</p>
+</div>
+
+<div class="grant-item">
+  <h4>Lecturers' Perception on Social Media Networks Uses in Education</h4>
+  <p>UniKL STRG Grant &nbsp;·&nbsp; 2016–2017 &nbsp;·&nbsp; Value: RM 20,000 &nbsp;·&nbsp; Status: Completed</p>
+  <p><strong>Outcomes:</strong> Scopus-indexed publication (ACM IMCOM 2017, Beppu, Japan).</p>
+</div>
+
+<div class="grant-item">
+  <h4>Students' Perspective for Social Network Use to Assess Courses and Lecturers</h4>
+  <p>UniKL STRG Grant &nbsp;·&nbsp; 2017–2018 &nbsp;·&nbsp; Value: RM 20,000 &nbsp;·&nbsp; Status: Completed</p>
+</div>
+
+<div class="grant-item">
+  <h4>Optimized Recommendation Systems in Big Data Scenario</h4>
+  <p>UniKL STRG Grant &nbsp;·&nbsp; 2018–2019 &nbsp;·&nbsp; Status: Completed</p>
+  <p><strong>Outcomes:</strong> Python/Flask recommender-system prototype; multiple Scopus-indexed publications.</p>
+</div>
+
+<!-- ═══════════════════════════ PATENTS ═══════════════════════════ -->
+<div class="sec-title">Patents (Inventor / Co-Inventor)</div>
+<ul class="patent-list">
+  <li>
+    <span class="pid">D09Y0520 · MIMOS Berhad, Malaysia (also filed USA)</span>
+    "Methodologies of MR-BS Mesh Using IEEE 802.16j with Enhanced Network Entry Process"
+  </li>
+  <li>
+    <span class="pid">D09Y0529 · MIMOS Berhad, Malaysia</span>
+    "Frame Structure for Multi-Hop Wireless Mesh Networks"
+  </li>
+  <li>
+    <span class="pid">D09Y0716 · MIMOS Berhad, Malaysia</span>
+    "Method and System Architecture for Base Station Mesh Networks"
+  </li>
+  <li>
+    <span class="pid">D10Y0731 · MIMOS Berhad, Malaysia</span>
+    "A Cell Site Routing Method for Backhaul Mesh in WiMAX Networks"
+  </li>
+</ul>
+
+<!-- ═══════════════════════════ AWARDS & RECOGNITION ═══════════════════════════ -->
+<div class="sec-title">Awards &amp; Recognition</div>
+<table class="award-table">
+  <tr><td>🥇 Gold</td><td><strong>BlueS Remote Device Controller</strong> — Brussels International Innovation Exhibition (UREKA / ITEX) · "Real-time wireless remote hardware control and data acquisition using Bluetooth technology"</td></tr>
+  <tr><td>🥈 Silver</td><td><strong>LEADER Smart Plate Recognition System</strong> — ITEX Malaysia</td></tr>
+  <tr><td>🥉 Bronze</td><td><strong>Secure Crowdfunding System Using Blockchain</strong> — ITEX Malaysia</td></tr>
+  <tr><td>🥉 Bronze</td><td><strong>Minimising Inter-Piconet Interference / Dynamic Scatternet Algorithms for Bluetooth PAN</strong> — UPM Innovation Awards</td></tr>
+  <tr><td>🏆 Award</td><td><strong>Multiple ITEX Malaysia Innovation Awards</strong> — various projects</td></tr>
+  <tr><td>🏆 Award</td><td><strong>Wireless Communication Research Recognition Awards</strong> — MIMOS Berhad</td></tr>
+</table>
+
+<!-- ═══════════════════════════ ACADEMIC APPOINTMENTS ═══════════════════════════ -->
+<div class="sec-title">Academic Appointments</div>
+
+<div class="appt">
+  <div class="appt-row">
+    <span class="appt-title">Senior Lecturer / Associate Professor</span>
+    <span class="appt-date">January 2016 – November 2020</span>
+  </div>
+  <div class="appt-inst">Malaysian Institute of Information Technology (MIIT), Universiti Kuala Lumpur (UniKL) &nbsp;·&nbsp; <span class="appt-country">Malaysia</span></div>
+  <ul>
+    <li><strong>Teaching &amp; Learning:</strong> Delivered undergraduate and postgraduate courses in software engineering, Android development, object-oriented programming, wireless networks, real-time systems and operating systems.</li>
+    <li><strong>Curriculum Development:</strong> Designed and revised course materials aligned with industry competency standards and outcome-based education (OBE) frameworks; contributed to programme accreditation quality assurance.</li>
+    <li><strong>Student Supervision:</strong> Supervised approximately <strong>100 undergraduate Final Year Projects</strong> across software engineering, AI, mobile applications, IoT, networking, cloud and embedded systems. Supervised MSc and PhD research candidates.</li>
+    <li><strong>Research &amp; Publication:</strong> Published multiple Scopus-indexed research outputs in AI, Blockchain, Big Data, IoT, UAV systems and computer vision; participated in three national-level STRG research grants.</li>
+    <li><strong>Industry Engagement:</strong> Integrated current industry practices and live project experience into computing curricula; provided Python/ML training internally to colleagues.</li>
+    <li><strong>Academic Service:</strong> KPI reporting, examination management, academic quality reviews, outcome-based education initiatives.</li>
+    <li><strong>Conference Leadership:</strong> Conference Chair — ICCAE; Workshop Chair — DependSys; Reviewer — IEEE Malaysia Chapter publications and conferences.</li>
+  </ul>
+</div>
+
+<div class="appt">
+  <div class="appt-row">
+    <span class="appt-title">Lecturer in Computing</span>
+    <span class="appt-date">November 2020 – November 2021</span>
+  </div>
+  <div class="appt-inst">TAFE NSW &nbsp;·&nbsp; <span class="appt-country">Australia</span></div>
+  <ul>
+    <li>Delivered computing, ICT and software engineering units covering web development (PHP, Bootstrap, JavaScript), mobile development (Android, iOS native), back-end services (Go, Python/Django), Docker and IoT.</li>
+    <li>Facilitated hands-on project-based learning aligned with Australian industry workforce competency requirements.</li>
+    <li>Conducted assessments, examiner marking, learner mentoring and student competency tracking.</li>
+    <li>Developed new curriculum modules and practical IoT/cybersecurity labs in response to emerging workforce needs.</li>
+    <li>Applied contemporary software engineering practices (Git, CI/CD, Agile) in all delivered units.</li>
+  </ul>
+</div>
+
+<div class="appt">
+  <div class="appt-row">
+    <span class="appt-title">Lecturer in Computer Science</span>
+    <span class="appt-date">January 2006 – March 2007</span>
+  </div>
+  <div class="appt-inst">Infrastructure University Kuala Lumpur (IUKL) &nbsp;·&nbsp; <span class="appt-country">Malaysia</span></div>
+  <ul>
+    <li>Delivered: Artificial Intelligence, C Programming, C++, C#, Prolog, Visual Basic and MS Office platforms.</li>
+    <li>Conducted laboratory tutorials and practical assessments; mentored undergraduate students in programming projects.</li>
+  </ul>
+</div>
+
+<div class="appt">
+  <div class="appt-row">
+    <span class="appt-title">Graduate Research Assistant &amp; Tutor</span>
+    <span class="appt-date">November 2003 – March 2006</span>
+  </div>
+  <div class="appt-inst">Wireless Communication &amp; Network Engineering Group, Universiti Putra Malaysia (UPM) &nbsp;·&nbsp; <span class="appt-country">Malaysia</span></div>
+  <ul>
+    <li>Tutored C and C++ programming courses for <strong>7 consecutive semesters</strong>.</li>
+    <li>Conducted laboratory instruction and assessed student assignments across Computer and Communication Systems Engineering.</li>
+    <li>Supervised undergraduate students with hardware/software final year projects in embedded systems and Bluetooth communications.</li>
+    <li>Conducted R&amp;D on Bluetooth-based remote control and monitoring systems (C/C++, PIC C, hardware programming).</li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════ TEACHING PORTFOLIO ═══════════════════════════ -->
+<div class="sec-title">Teaching Portfolio — Subjects Taught</div>
+<table class="teach-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Subject / Unit</th>
+      <th>Institution</th>
+      <th>Role</th>
+      <th>Key Topics Covered</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>Principles of Computer Programming</td><td>UniKL / MIIT</td><td>Senior Lecturer</td><td>Java, Kotlin, OOP fundamentals, problem solving</td></tr>
+    <tr><td>2</td><td>Android Native Development</td><td>UniKL / MIIT</td><td>Senior Lecturer</td><td>Android Studio, SDK, UI, background services, APIs</td></tr>
+    <tr><td>3</td><td>Object-Oriented Programming (Java)</td><td>UniKL / MIIT</td><td>Senior Lecturer</td><td>OOA/OOD, design patterns, Java SE, UML</td></tr>
+    <tr><td>4</td><td>Software Engineering</td><td>UniKL / MIIT &amp; IUKL</td><td>Senior Lecturer</td><td>SDLC, Agile, design patterns, testing, C/C++</td></tr>
+    <tr><td>5</td><td>Wireless Networks</td><td>UniKL / MIIT</td><td>Senior Lecturer</td><td>802.11, 802.16, WiMAX, LTE, OFDMA, radio resource management</td></tr>
+    <tr><td>6</td><td>Operating Systems</td><td>UniKL / MIIT</td><td>Senior Lecturer</td><td>Process management, memory, scheduling, I/O, virtualisation, Linux admin</td></tr>
+    <tr><td>7</td><td>Real-Time Systems</td><td>UniKL / MIIT</td><td>Senior Lecturer</td><td>RTOS, real-time scheduling, multithreading, fault tolerance, RT design</td></tr>
+    <tr><td>8</td><td>Artificial Intelligence</td><td>IUKL &amp; UniKL</td><td>Lecturer</td><td>AI concepts, Prolog, search algorithms, C++ AI implementations</td></tr>
+    <tr><td>9</td><td>Computer Networks</td><td>UniKL / MIIT</td><td>Senior Lecturer</td><td>TCP/IP, routing, network design, protocols, Cisco fundamentals</td></tr>
+    <tr><td>10</td><td>Network Simulation (QualNet/Exata)</td><td>BMI, GMI, UTM, UiTM</td><td>Trainer</td><td>QualNet/Exata simulation, protocol stack development, emulation</td></tr>
+    <tr><td>11</td><td>Mobile Computing</td><td>TM R&amp;D Cyberjaya</td><td>Trainer</td><td>iOS, Objective-C, mobile application design, cellular architecture</td></tr>
+    <tr><td>12</td><td>C / C++ Programming</td><td>UPM &amp; IUKL</td><td>Tutor / Lecturer</td><td>Systems programming, memory management, pointers, data structures</td></tr>
+    <tr><td>13</td><td>Web &amp; Mobile Development</td><td>TAFE NSW</td><td>Lecturer</td><td>PHP, Bootstrap, JavaScript, Go, Android, iOS native, Django</td></tr>
+    <tr><td>14</td><td>IoT &amp; Cybersecurity</td><td>TAFE NSW</td><td>Lecturer</td><td>IoT protocols, MQTT, edge computing, security principles, practical labs</td></tr>
+    <tr><td>15</td><td>Big Data Architecture</td><td>UniKL / MIIT</td><td>Senior Lecturer</td><td>Big data pipelines, analytics frameworks, distributed storage</td></tr>
+    <tr><td>16</td><td>Visual Basic / Office Platforms</td><td>IUKL</td><td>Lecturer</td><td>VB programming, MS Office automation, database integration</td></tr>
+    <tr><td>17</td><td>Python / ML &amp; Data Science</td><td>UniKL (internal training)</td><td>Trainer</td><td>Python fundamentals, NumPy, Pandas, scikit-learn, Flask, ML algorithms</td></tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════ STUDENT SUPERVISION ═══════════════════════════ -->
+<div class="sec-title">Student Supervision</div>
+<div class="two-col">
+  <div class="two-col-block">
+    <h5>Postgraduate Supervision</h5>
+    <ul>
+      <li>MSc Research supervision — Universiti Kuala Lumpur</li>
+      <li>PhD Research supervision — Universiti Kuala Lumpur</li>
+      <li>Research areas: Embedded Systems, IoT, Networking, AI, Big Data</li>
+      <li>Co-supervision and advisory roles on funded research projects</li>
+    </ul>
+  </div>
+  <div class="two-col-block">
+    <h5>Undergraduate Supervision (~100 FYPs)</h5>
+    <ul>
+      <li>Software Engineering systems and architectures</li>
+      <li>Artificial Intelligence and Machine Learning</li>
+      <li>Mobile Application Development (Android/iOS)</li>
+      <li>IoT and Embedded Systems projects</li>
+      <li>Computer Networking and Wireless Systems</li>
+      <li>Cloud Computing and Distributed Applications</li>
+      <li>Computer Vision and Image Processing</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ ACADEMIC LEADERSHIP & SERVICE ═══════════════════════════ -->
+<div class="sec-title">Academic Leadership &amp; Service</div>
+<div class="two-col">
+  <div class="two-col-block">
+    <h5>Conference &amp; Editorial Roles</h5>
+    <ul>
+      <li>Conference Chair — ICCAE</li>
+      <li>Workshop Chair — DependSys</li>
+      <li>Reviewer — IEEE Malaysia Chapter journals &amp; conferences</li>
+      <li>Programme committee participation</li>
+      <li>EDAS reviewer (IEEE) — LTE-Advanced, QoE, IPTV, Heterogeneous Networks</li>
+    </ul>
+  </div>
+  <div class="two-col-block">
+    <h5>Curriculum &amp; Academic Quality</h5>
+    <ul>
+      <li>Curriculum design and enhancement (UniKL, TAFE NSW)</li>
+      <li>Outcome-based education (OBE) implementation</li>
+      <li>Programme quality improvement and accreditation support</li>
+      <li>Industry engagement and curriculum-industry alignment</li>
+      <li>Academic mentoring, student advising and KPI delivery</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ INDUSTRY LEADERSHIP ═══════════════════════════ -->
+<div class="sec-title">Industry Leadership &amp; Professional Practice</div>
+
+<div class="appt">
+  <div class="appt-row">
+    <span class="appt-title">Senior Software Engineer / Principal Engineer</span>
+    <span class="appt-date">March 2024 – Present</span>
+  </div>
+  <div class="appt-inst">Mastercom Australia &nbsp;·&nbsp; <span class="appt-country">Sydney, Australia</span></div>
+  <ul>
+    <li>Intelligent transportation systems and public transport technology platforms.</li>
+    <li>Fleet telemetry, edge computing and IoT monitoring solutions.</li>
+    <li>Cloud-native backend development; Android and mobile software development.</li>
+    <li><em>Technologies: Golang, Kotlin, Android, PostgreSQL, HERE Navigation SDK, AWS, Linux, FastAPI, Raspberry Pi, SocketCAN, J1939</em></li>
+  </ul>
+</div>
+
+<div class="appt">
+  <div class="appt-row">
+    <span class="appt-title">Senior Software Engineer</span>
+    <span class="appt-date">December 2021 – March 2024</span>
+  </div>
+  <div class="appt-inst">MST Global / Komatsu &nbsp;·&nbsp; <span class="appt-country">Australia</span></div>
+  <ul>
+    <li>Mining technology systems, industrial communications and enterprise integration platforms.</li>
+    <li>Mission-critical operational systems, industrial IoT environments, distributed real-time platforms.</li>
+    <li><em>Technologies: Go, gRPC, Angular, WebSocket, Kubernetes, Azure</em></li>
+  </ul>
+</div>
+
+<div class="appt">
+  <div class="appt-row">
+    <span class="appt-title">VP – Software System Architecture</span>
+    <span class="appt-date">2014 – 2015</span>
+  </div>
+  <div class="appt-inst">Ebizu Sdn Bhd &nbsp;·&nbsp; <span class="appt-country">Malaysia</span></div>
+  <ul>
+    <li>Enterprise mobile architecture, retail and hospitality POS systems, mobile platform development, agile delivery leadership.</li>
+  </ul>
+</div>
+
+<div class="appt">
+  <div class="appt-row">
+    <span class="appt-title">Senior Consultant / VP Technology Architecture</span>
+    <span class="appt-date">2013 – 2014</span>
+  </div>
+  <div class="appt-inst">MOLPay &nbsp;·&nbsp; <span class="appt-country">Malaysia</span></div>
+  <ul>
+    <li>Mobile payment platforms, PCI-DSS compliance, secure financial technology systems and payment gateway integration.</li>
+  </ul>
+</div>
+
+<div class="appt">
+  <div class="appt-row">
+    <span class="appt-title">Researcher</span>
+    <span class="appt-date">2007 – 2010</span>
+  </div>
+  <div class="appt-inst">MIMOS Berhad (National ICT R&amp;D Centre) &nbsp;·&nbsp; <span class="appt-country">Malaysia</span></div>
+  <ul>
+    <li>WiMAX/OFDMA protocol research; generated 4 patents. Research areas: OFDMA, WiMAX, Wireless Mesh Networks, Protocol Engineering, Radio Resource Management, Simulation and Performance Analysis.</li>
+    <li><em>Technologies: C/C++, QualNet, NS2, OPNET</em></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════ TECHNICAL COMPETENCIES ═══════════════════════════ -->
+<div class="sec-title">Technical Competencies</div>
+<div class="two-col">
+  <div class="two-col-block">
+    <h5>Programming Languages</h5>
+    <ul>
+      <li>Go / Golang — Advanced</li>
+      <li>Python (ML, Data Science, Backend) — Advanced</li>
+      <li>Java / Kotlin (Android, SE, EE) — Advanced</li>
+      <li>C / C++ (Systems, Protocols) — Advanced (20 years)</li>
+      <li>Swift / Objective-C (iOS) — Advanced (15 years)</li>
+      <li>JavaScript / TypeScript / React — Proficient</li>
+      <li>PHP / Django — Proficient</li>
+      <li>Ruby / Ruby on Rails — Proficient</li>
+      <li>Lua, Bash / Shell Scripting — Advanced</li>
+      <li>Prolog — Teaching level</li>
+    </ul>
+  </div>
+  <div class="two-col-block">
+    <h5>Research &amp; Engineering Tools</h5>
+    <ul>
+      <li>QualNet / Exata (Network Simulation) — Advanced</li>
+      <li>NS2 / OPNET — Proficient</li>
+      <li>OpenCV (Computer Vision) — Proficient</li>
+      <li>AWS (ECS Fargate, IoT Core, Lambda) — Advanced</li>
+      <li>Azure / Kubernetes / Docker — Advanced</li>
+      <li>PostgreSQL / PostGIS / MySQL / SQLite — Advanced</li>
+      <li>HERE SDK / GTFS / Geospatial APIs — Advanced</li>
+      <li>Raspberry Pi / SocketCAN / J1939 — Advanced</li>
+      <li>Grafana / Prometheus / OpenSearch — Proficient</li>
+      <li>Git / CI/CD / Jira — Advanced</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ PROFESSIONAL MEMBERSHIPS ═══════════════════════════ -->
+<div class="sec-title">Professional Memberships</div>
+<ul class="inline-list">
+  <li>IEEE Member — Communication Society, Malaysian Chapter (since 2008)</li>
+  <li>ACM Member — Association for Computing Machinery</li>
+  <li>Certified Core Network Engineer — WiMAX Forum (2009)</li>
+  <li>Member — International Research Community Contributor</li>
+</ul>
+
+<!-- ═══════════════════════════ LANGUAGE PROFICIENCY ═══════════════════════════ -->
+<div class="sec-title">Language Proficiency</div>
+<ul class="inline-list">
+  <li>English — IELTS 7.5 (Proficient)</li>
+  <li>Bengali — Native (10/10)</li>
+  <li>Hindi — Conversational (8/10)</li>
+  <li>Malay — Working level (reading and speaking)</li>
+</ul>
+
+<!-- ═══════════════════════════ SCHOLARSHIPS ═══════════════════════════ -->
+<div class="sec-title">Scholarships</div>
+<ul>
+  <li><strong>MSc/PhD Research Scholarship</strong> — Universiti Putra Malaysia, Malaysia</li>
+  <li><strong>Talent Pool Scholarship</strong> — Government of Bangladesh (BSc, Khulna University)</li>
+  <li><strong>Government Scholarship</strong> — Government of Bangladesh (SSC &amp; HSC, Jhenidah Cadet College)</li>
+</ul>
+
+<!-- ═══════════════════════════ REFERENCES ═══════════════════════════ -->
+<div class="sec-title">References</div>
+<div class="ref-grid">
+  <div class="ref-card">
+    <div class="ref-name">Prof. Dr. Borhanuddin Mohd. Ali</div>
+    <p>Professor, Faculty of Engineering</p>
+    <p>Universiti Putra Malaysia (UPM), Malaysia</p>
+    <p><em>[Contact details available upon request]</em></p>
+  </div>
+  <div class="ref-card">
+    <div class="ref-name">Prof. Ir. Dr. Hafizal Mohammad</div>
+    <p>Former Director, Wireless Network &amp; Protocol Research Lab, MIMOS Berhad</p>
+    <p>Faculty Head, USIM, Malaysia</p>
+    <p><em>[Contact details available upon request]</em></p>
+  </div>
+  <div class="ref-card">
+    <div class="ref-name">Dr. Munaisyah Abdullah</div>
+    <p>Former Head, Software Engineering Section</p>
+    <p>MIIT, Universiti Kuala Lumpur (UniKL), Malaysia</p>
+    <p><em>[Contact details available upon request]</em></p>
+  </div>
+  <div class="ref-card">
+    <div class="ref-name">Hamish Duff</div>
+    <p>Managing Director</p>
+    <p>Mastercom Australia, Sydney, Australia</p>
+    <p><em>[Contact details available upon request]</em></p>
+  </div>
+</div>
+<p style="margin-top:10px; font-size:9.5pt; text-align:center;"><em>Additional academic and professional references with full contact details are available upon request.</em></p>
+
+</body>
+</html>
